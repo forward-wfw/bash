@@ -524,7 +524,7 @@ initialize_shell_variables (env, privmode)
     }
 
   if (current_user.euid == 0)
-    set_if_not ("PS4", "+ ");
+    bind_variable ("PS4", "+ ", 0);
   else
     set_if_not ("PS4", "+ ");
 
